@@ -13,6 +13,7 @@ use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
+    use Traits\LastActivedAtHelper;
     use Traits\ActiveUserHelper;
     use HasRoles;
     use MustVerifyEmailTrait;
